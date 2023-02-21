@@ -1,4 +1,5 @@
 
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -9,7 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,9 +17,8 @@ import { ErrorPageComponent } from './shared/error-page/error-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
