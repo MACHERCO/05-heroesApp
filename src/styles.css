@@ -2,3 +2,11 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* para empujar al boton Log-out al otro extremo */
+
+.spacer {
+
+    flex: 1 1 auto;
+}
