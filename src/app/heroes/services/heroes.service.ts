@@ -13,20 +13,33 @@ export class HeroesService {
 
   constructor(private http: HttpClient) { }
 
+  // METODOS GET PARA TRAER INFORMACION DE LA BASE DE DATOS
+
   getHeroes () : Observable<Heroe[]> {
 
    return  this.http.get<Heroe []>(`${ this.baseUrl }/heroes`)
 
-  } 
+  }
 
   getHeroesPorId (id : string) : Observable<Heroe> {
 
     return  this.http.get<Heroe >(`${ this.baseUrl }/heroes/${ id } `)
- 
-   } 
+
+   }
 
    getSugerencias (termino : string) : Observable<Heroe[]> {
 
     return  this.http.get<Heroe[] >(`${ this.baseUrl }/heroes?q=${termino}&_limit=6`)
    }
+
+   //METODOS POST PARA INSERTAR EN LA BBDD
+
+   //post agregar heroe
+
+   agregarHeroe ( heroe : Heroe ) : Observable<Heroe> {
+
+      return this.http.post<Heroe>(`${ this.baseUrl }/heroes`,heroe)
+
+   }
+
 }
